@@ -1,0 +1,24 @@
+<input type="radio" name="options" value="option1" onclick="showList()"> Option 1
+<input type="radio" name="options" value="option2" onclick="showList()"> Option 2
+
+<div id="list" style="display: none;">
+    <!-- Nội dung của danh sách sẽ được hiển thị ở đây -->
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+</div>
+<script>
+    function showList() {
+        var option2 = document.querySelector('input[name="options"][value="option2"]');
+        var list = document.getElementById('list');
+        
+        if (option2.checked) {
+            list.style.display = 'block'; // Hiển thị danh sách khi Option 2 được chọn
+        } else {
+            list.style.display = 'none'; // Ẩn danh sách khi Option 1 được chọn
+        }
+    }
+    
+</script>
